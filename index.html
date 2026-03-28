@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiao Jun Ang — AI Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a class="nav-logo" href="#hero">XJ</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section id="hero">
+        <div class="hero-inner">
+            <div class="hero-photo">
+                <div class="photo-circle">
+                    <img src="assets/Ang Xiao Jun.jpeg" alt="Xiao Jun Ang">
+                </div>
+            </div>
+            <h1 class="hero-name">Xiao Jun Ang</h1>
+            <p class="hero-tagline">AI Engineer &nbsp;·&nbsp; ML Researcher &nbsp;·&nbsp; AI Singapore Apprentice</p>
+            <div class="hero-links">
+                <a href="https://github.com/xiaojun1402" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/angxiaojun/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:xiaojun1402@gmail.com" class="icon-btn" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm an AI Engineer with hands-on experience building end-to-end ML pipelines and deploying
+                    production-grade models across classical ML, computer vision, and Large Language Models.
+                    Currently training under AI Singapore's national <strong>AI Apprenticeship Programme (AIAP)</strong>
+                    and pursuing a <strong>Master of IT in Business (AI)</strong> at Singapore Management University.
+                </p>
+                <p>
+                    My background in <strong>Pharmaceutical Science</strong> (NUS, Honors Distinction) gives me a
+                    unique lens — bridging rigorous scientific methodology with modern machine learning to drive
+                    data-informed decisions and scalable AI solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+        </div>
+        <div class="carousel-outer">
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="track1"></div>
+            </div>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track carousel-reverse" id="track2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
+                    <div class="project-img" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
+                        <span class="project-img-label">Project Preview</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Project Alpha</h3>
+                        <p>Short description of the project. Highlight the problem solved and the impact delivered.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">MLflow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
+                    <div class="project-img" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 50%, #264f78 100%);">
+                        <span class="project-img-label">Project Preview</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Project Beta</h3>
+                        <p>Short description of the project. Highlight the problem solved and the impact delivered.</p>
+                        <div class="project-tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">PySpark</span>
+                            <span class="tag">MLflow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
+                    <div class="project-img" style="background: linear-gradient(135deg, #1a0533 0%, #3d1060 50%, #6b21a8 100%);">
+                        <span class="project-img-label">Project Preview</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Project Gamma</h3>
+                        <p>Short description of the project. Highlight the problem solved and the impact delivered.</p>
+                        <div class="project-tags">
+                            <span class="tag">LLMs</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+        </div>
+        <div class="timeline-wrapper">
+            <div class="timeline-line" id="timelineLine"></div>
+            <div class="timeline-items container">
+
+                <!-- 1 · AI Singapore -->
+                <div class="timeline-item" data-index="0">
+                    <div class="timeline-dot"></div>
+                    <div class="tcard">
+                        <div class="tcard-header">
+                            <div class="tcard-identity">
+                                <div class="tcard-icon logo-aisg">
+                                    <img src="assets/logos/aisg.png" alt="AI Singapore">
+                                </div>
+                                <div class="tcard-title-group">
+                                    <h3>AI Engineer (AIAP)</h3>
+                                    <span class="tcard-company"><i class="fas fa-building" aria-hidden="true"></i> AI Singapore</span>
+                                </div>
+                            </div>
+                            <span class="tcard-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Jan 2026 – Present</span>
+                        </div>
+                        <p class="tcard-desc">Selected for a competitive national AI programme with intensive deep-skilling in AI/ML engineering, followed by an industry project deployment.</p>
+                        <div class="tcard-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">PySpark</span>
+                            <span class="tag">MLflow</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Cloud Run</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">LLMs</span>
+                            <span class="tag">Airflow</span>
+                        </div>
+                        <div class="tcard-bullets">
+                            <ul>
+                                <li>Selected for a competitive national AI programme consisting of an intensive deep-skilling phase in high-level AI/ML engineering, followed by an industry project deployment.</li>
+                                <li>Built end-to-end ML pipelines (PySpark, MLflow, Docker, Cloud Run) supporting scalable data preprocessing, model training, evaluation, deployment, and monitoring.</li>
+                                <li>Developed and benchmarked deep learning models (LSTM, CNN architectures) using PyTorch with systematic experimentation and hyperparameter optimization.</li>
+                                <li>Implemented RAG-based knowledge systems combining internal datasets and external scientific literature for domain-specific question answering and decision support.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn" aria-expanded="false">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
+                <!-- 2 · Beeva AI -->
+                <div class="timeline-item" data-index="1">
+                    <div class="timeline-dot"></div>
+                    <div class="tcard">
+                        <div class="tcard-header">
+                            <div class="tcard-identity">
+                                <div class="tcard-icon logo-beeva">
+                                    <img src="assets/logos/beeva-dark.png" alt="Beeva AI" id="beeva-logo">
+                                </div>
+                                <div class="tcard-title-group">
+                                    <h3>Machine Learning Engineer</h3>
+                                    <span class="tcard-company"><i class="fas fa-building" aria-hidden="true"></i> Beeva AI</span>
+                                </div>
+                            </div>
+                            <span class="tcard-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Sep 2025 – Jan 2026</span>
+                        </div>
+                        <p class="tcard-desc">Developed and fine-tuned deep learning models in PyTorch for computer vision, with production-grade MLOps workflows supporting reproducible research.</p>
+                        <div class="tcard-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">MLflow</span>
+                            <span class="tag">DVC</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <div class="tcard-bullets">
+                            <ul>
+                                <li>Developed and fine-tuned deep learning models in PyTorch for computer vision applications, with emphasis on generalizable feature learning and robust validation.</li>
+                                <li>Implemented production-grade MLOps workflows (MLflow, DVC, Docker) to support reproducible research and scalable deployment.</li>
+                                <li>Optimized models for latency, inference cost, and deployment constraints, balancing experimental performance with real-world usability.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn" aria-expanded="false">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
+                <!-- 3 · A*STAR -->
+                <div class="timeline-item" data-index="2">
+                    <div class="timeline-dot"></div>
+                    <div class="tcard">
+                        <div class="tcard-header">
+                            <div class="tcard-identity">
+                                <div class="tcard-icon logo-astar">
+                                    <img src="assets/logos/astar.png" alt="A*STAR">
+                                </div>
+                                <div class="tcard-title-group">
+                                    <h3>Research Officer</h3>
+                                    <span class="tcard-company"><i class="fas fa-building" aria-hidden="true"></i> A*STAR – Nutrition &amp; Digestive Health</span>
+                                </div>
+                            </div>
+                            <span class="tcard-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Oct 2023 – Jan 2026</span>
+                        </div>
+                        <p class="tcard-desc">Conducted PBPK/PK-PD modelling and quantitative LC-MS/MS analysis to support drug bioavailability research and evidence-based decision-making.</p>
+                        <div class="tcard-tags">
+                            <span class="tag">PBPK Modelling</span>
+                            <span class="tag">LC-MS/MS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">R</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">ADME</span>
+                        </div>
+                        <div class="tcard-bullets">
+                            <ul>
+                                <li>Designed and executed in vitro biological and biochemical models (Caco-2 and SHIME®) to quantify compound bioavailability, transport, and functional performance.</li>
+                                <li>Conducted quantitative LC-MS/MS analysis to support PBPK and PK/PD-informed models assessing pharmaco/nutrico/toxicokinetic behaviour of drugs and food ingredients.</li>
+                                <li>Translated biological mechanisms (ADME, transporter kinetics, enzyme interactions) into model-ready parameters to improve clinical prediction accuracy.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn" aria-expanded="false">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
+                <!-- 4 · Craft Health -->
+                <div class="timeline-item" data-index="3">
+                    <div class="timeline-dot"></div>
+                    <div class="tcard">
+                        <div class="tcard-header">
+                            <div class="tcard-identity">
+                                <div class="tcard-icon logo-craft">
+                                    <img src="assets/logos/crafthealth.png" alt="Craft Health">
+                                </div>
+                                <div class="tcard-title-group">
+                                    <h3>Product Development Lead</h3>
+                                    <span class="tcard-company"><i class="fas fa-building" aria-hidden="true"></i> Craft Health</span>
+                                </div>
+                            </div>
+                            <span class="tcard-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Jun 2022 – Sep 2023</span>
+                        </div>
+                        <p class="tcard-desc">Led data-driven product development for pharmaceuticals and nutraceuticals, managing a team of five across multiple client projects.</p>
+                        <div class="tcard-tags">
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">Market Research</span>
+                            <span class="tag">Product Development</span>
+                            <span class="tag">Team Management</span>
+                        </div>
+                        <div class="tcard-bullets">
+                            <ul>
+                                <li>Led data-driven product development for pharmaceuticals, nutraceuticals, and food &amp; beverage — translating technical and market requirements into actionable plans.</li>
+                                <li>Conducted quantitative market research and trend analysis to identify consumer needs and generate product innovation strategies.</li>
+                                <li>Managed a team of five formulation associates, applying structured methodologies and quality control metrics to ensure reproducibility of outcomes.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn" aria-expanded="false">Read more <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="cards-list">
+
+                <div class="card">
+                    <div class="card-logo logo-smu">
+                        <img src="assets/logos/smu.png" alt="Singapore Management University">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <div>
+                                <h3>Singapore Management University</h3>
+                                <p class="role">Master of IT in Business – Artificial Intelligence Track</p>
+                            </div>
+                            <span class="dates">Current</span>
+                        </div>
+                        <ul>
+                            <li>Recipient of the <strong>Richard Lim Lee Scholarship</strong></li>
+                            <li>Coursework: GenAI with LLM, Applied Machine Learning, Machine Learning Engineering, Reinforcement Learning, Recommender Systems, Query Processing &amp; Optimization, Statistical Thinking for Data Science</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-logo logo-nus">
+                        <img src="assets/logos/nus.png" alt="National University of Singapore">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <div>
+                                <h3>National University of Singapore</h3>
+                                <p class="role">Bachelor of Science in Pharmaceutical Science with Honors (Distinction)</p>
+                            </div>
+                            <span class="dates">Jul 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-logo logo-np">
+                        <img src="assets/logos/np.png" alt="Ngee Ann Polytechnic">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <div>
+                                <h3>Ngee Ann Polytechnic</h3>
+                                <p class="role">Diploma with Merit in Biomedical Science</p>
+                            </div>
+                            <span class="dates">May 2018</span>
+                        </div>
+                        <ul>
+                            <li>Recipient of the <strong>Merit Scholarship Award</strong>, Overseas Merit Award, Fischer Scientific Prize, and Practical Mediscience Prize</li>
+                            <li>Graduated in the <strong>top 10%</strong> of the Biomedical Science cohort</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+    <footer>
+        <p>© 2026 Xiao Jun Ang &nbsp;·&nbsp; Built with HTML, CSS &amp; JS</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
