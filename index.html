@@ -10,10 +10,13 @@
 </head>
 <body>
 
+    <!-- Cursor glow overlay -->
+    <div id="cursor-glow"></div>
+
     <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
-            <a class="nav-logo" href="#hero"><span class="nav-logo-default">&lt;XJ/&gt;</span><span class="nav-logo-hover">Home</span></a>
+            <a class="nav-logo" href="#hero"><span class="nav-logo-default">XJ</span><span class="nav-logo-hover">Home</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -49,13 +52,10 @@
     <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
     <section id="hero">
         <div class="hero-inner">
-
-            <!-- Top: text -->
             <p class="hero-greeting">Hello, I'm</p>
             <h1 class="hero-name">Xiao Jun Ang</h1>
             <p class="hero-typed"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
 
-            <!-- Bottom: photo + floating badges -->
             <div class="hero-visual">
                 <div class="hero-photo-wrap">
                     <img src="assets/Ang Xiao Jun-removebg.png" alt="Xiao Jun Ang" class="hero-photo-img">
@@ -87,30 +87,9 @@
                 </div>
             </div>
 
-            <!-- Social icons below photo -->
-            <div class="hero-links">
-                <a href="https://github.com/xiaojun1402" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/angxiaojun/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="mailto:xiaojun1402@gmail.com" class="icon-btn" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-
-        </div>
-        <a href="#about" class="scroll-hint" aria-label="Scroll down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
-
-    <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title" data-label="01 — About">About Me</h2>
-            <div class="about-content">
+            <!-- About card — flush below photo, contains everything -->
+            <div class="hero-about" id="about" data-reveal>
+                <h2 class="hero-about-title">About Me</h2>
                 <p>
                     I'm an AI Engineer with hands-on experience building end-to-end ML pipelines and deploying
                     production-grade models across classical ML, computer vision, and Large Language Models.
@@ -122,14 +101,45 @@
                     unique lens — bridging rigorous scientific methodology with modern machine learning to drive
                     data-informed decisions and scalable AI solutions.
                 </p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="about-stat-number">4+</span>
+                        <span class="about-stat-label">Years in Science & Data</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">10+</span>
+                        <span class="about-stat-label">ML Tools &amp; Frameworks</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">2</span>
+                        <span class="about-stat-label">Graduate Degrees</span>
+                    </div>
+                </div>
+                <div class="about-footer">
+                    <div class="hero-links">
+                        <a href="https://github.com/xiaojun1402" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="icon-btn-label">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/angxiaojun/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span class="icon-btn-label">LinkedIn</span>
+                        </a>
+                        <a href="mailto:xiaojun1402@gmail.com" class="icon-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            <span class="icon-btn-label">Email</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title" data-label="02 — Skills">Skills &amp; Expertise</h2>
+            <h2 class="section-title" data-label="02 — Skills" data-reveal>Skills &amp; Expertise</h2>
         </div>
         <div class="carousel-outer">
             <div class="carousel-track-wrapper">
@@ -144,10 +154,10 @@
     <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title" data-label="03 — Projects">Featured Projects</h2>
+            <h2 class="section-title" data-label="03 — Projects" data-reveal>Featured Projects</h2>
             <div class="projects-grid">
 
-                <div class="project-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
+                <div class="project-card" data-reveal data-reveal-delay="1" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
                     <div class="project-img" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
                         <span class="project-img-label">Project Preview</span>
                     </div>
@@ -170,7 +180,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
+                <div class="project-card" data-reveal data-reveal-delay="2" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
                     <div class="project-img" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 50%, #264f78 100%);">
                         <span class="project-img-label">Project Preview</span>
                     </div>
@@ -193,7 +203,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
+                <div class="project-card" data-reveal data-reveal-delay="3" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
                     <div class="project-img" style="background: linear-gradient(135deg, #1a0533 0%, #3d1060 50%, #6b21a8 100%);">
                         <span class="project-img-label">Project Preview</span>
                     </div>
@@ -223,7 +233,7 @@
     <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title" data-label="04 — Experience">Work Experience</h2>
+            <h2 class="section-title" data-label="04 — Experience" data-reveal>Work Experience</h2>
         </div>
         <div class="timeline-wrapper">
             <div class="timeline-line" id="timelineLine"></div>
@@ -382,10 +392,10 @@
     <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
     <section id="education" class="section">
         <div class="container">
-            <h2 class="section-title" data-label="05 — Education">Education</h2>
+            <h2 class="section-title" data-label="05 — Education" data-reveal>Education</h2>
             <div class="cards-list">
 
-                <div class="card">
+                <div class="card" data-reveal data-reveal-delay="1">
                     <div class="card-logo logo-smu">
                         <img src="assets/logos/smu.png" alt="Singapore Management University">
                     </div>
@@ -404,7 +414,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-reveal data-reveal-delay="2">
                     <div class="card-logo logo-nus">
                         <img src="assets/logos/nus.png" alt="National University of Singapore">
                     </div>
@@ -419,7 +429,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-reveal data-reveal-delay="3">
                     <div class="card-logo logo-np">
                         <img src="assets/logos/np.png" alt="Ngee Ann Polytechnic">
                     </div>

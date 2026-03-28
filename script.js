@@ -169,7 +169,11 @@ drawTimelineLine();
 // Fade-in + slide-up each card as it enters the viewport
 const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        } else {
+            entry.target.classList.remove('is-visible');
+        }
     });
 }, { rootMargin: '-60px 0px' });
 
@@ -209,17 +213,43 @@ if (typeof VanillaTilt !== 'undefined') {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   NAVBAR — add shadow on scroll
+   NAVBAR — hide on scroll down, show on scroll up
 ═══════════════════════════════════════════════════════════ */
 const navbar = document.getElementById('navbar');
+let lastScrollY = 0;
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 24) {
-        navbar.style.boxShadow = '0 4px 24px rgba(0,0,0,0.25)';
+    const currentY = window.scrollY;
+
+    // Shadow
+    navbar.style.boxShadow = currentY > 24 ? '0 4px 24px rgba(0,0,0,0.25)' : 'none';
+
+    // Hide/show (only after scrolling past 80px)
+    if (currentY > lastScrollY && currentY > 80) {
+        navbar.classList.add('hidden');
     } else {
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('hidden');
     }
+    lastScrollY = currentY;
 }, { passive: true });
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLL REVEAL — fade + slide up on enter
+═══════════════════════════════════════════════════════════ */
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+        } else {
+            entry.target.classList.remove('revealed');
+        }
+    });
+}, {
+    rootMargin: '-60px 0px',
+    threshold: 0.1,
+});
+
+document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
 /* ═══════════════════════════════════════════════════════════
    SCROLL SPY — highlight active nav link
@@ -241,3 +271,23 @@ const spyObserver = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => spyObserver.observe(section));
+
+/* ═══════════════════════════════════════════════════════════
+   CURSOR GLOW — soft ambient light following the mouse
+═══════════════════════════════════════════════════════════ */
+const cursorGlow = document.getElementById('cursor-glow');
+let glowActive = false;
+
+document.addEventListener('mousemove', (e) => {
+    html.style.setProperty('--cursor-x', e.clientX + 'px');
+    html.style.setProperty('--cursor-y', e.clientY + 'px');
+    if (!glowActive) {
+        cursorGlow.style.opacity = '1';
+        glowActive = true;
+    }
+}, { passive: true });
+
+document.addEventListener('mouseleave', () => {
+    cursorGlow.style.opacity = '0';
+    glowActive = false;
+});
