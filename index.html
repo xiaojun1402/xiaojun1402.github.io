@@ -157,71 +157,140 @@
             <h2 class="section-title" data-label="03 — Projects" data-reveal>Featured Projects</h2>
             <div class="projects-grid">
 
-                <div class="project-card" data-reveal data-reveal-delay="1" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
-                    <div class="project-img" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
-                        <span class="project-img-label">Project Preview</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Project Alpha</h3>
-                        <p>Short description of the project. Highlight the problem solved and the impact delivered.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">MLflow</span>
+                <!-- 01 · VisionCommerce -->
+                <div class="project-row" data-reveal data-reveal-delay="1">
+                    <div class="project-card-col">
+                        <div class="project-card" style="background: linear-gradient(145deg, #1a1040 0%, #2d2060 55%, #1a1535 100%);">
+                            <div class="project-card-top">
+                                <div class="project-card-pills">
+                                    <span class="project-card-pill">Computer Vision</span>
+                                    <span class="project-card-pill">E-Commerce</span>
+                                </div>
+                                <p class="project-tagline">Standardising e-commerce product images with AI-powered scoring, segmentation and background inpainting</p>
+                            </div>
+                            <div class="project-card-screens">
+                                <img class="project-screen-1" src="assets/vision_commerce/vision_commerce_demo.png" alt="VisionCommerce App">
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                        <div class="project-card-links">
+                            <a href="https://github.com/nginyc/vision-commerce-demo" class="btn-outline" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
-                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-info-header">
+                            <span class="project-info-dash"></span>
+                            <h3>VisionCommerce</h3>
+                        </div>
+                        <p>AI pipeline that tackles visual fragmentation for e-commerce platforms — automatically scoring, segmenting, and standardising product images at scale.</p>
+                        <ul class="project-bullets">
+                            <li><span class="bullet-icon">✦</span> Fine-tuned DINOv2 evaluates product image quality based on clarity, background, and aesthetics</li>
+                            <li><span class="bullet-icon">✦</span> SAM3-based segmentation generates precise product masks for targeted background editing</li>
+                            <li><span class="bullet-icon">✦</span> FLUX.1-FILL diffusion model inpaints consistent, high-quality backgrounds across the catalogue</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-pill"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="tech-pill"><i class="fas fa-eye"></i> DINOv2</span>
+                            <span class="tech-pill">SAM3</span>
+                            <span class="tech-pill">FLUX.1-FILL</span>
+                            <span class="tech-pill"><i class="fas fa-chart-bar"></i> Streamlit</span>
+                            <span class="tech-pill"><i class="fas fa-robot"></i> Computer Vision</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-reveal data-reveal-delay="2" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
-                    <div class="project-img" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 50%, #264f78 100%);">
-                        <span class="project-img-label">Project Preview</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Project Beta</h3>
-                        <p>Short description of the project. Highlight the problem solved and the impact delivered.</p>
-                        <div class="project-tags">
-                            <span class="tag">Docker</span>
-                            <span class="tag">PySpark</span>
-                            <span class="tag">MLflow</span>
+                <!-- 02 · Flight Delay Prediction -->
+                <div class="project-row" data-reveal data-reveal-delay="2">
+                    <div class="project-card-col">
+                        <div class="project-card project-card--dual" style="background: linear-gradient(145deg, #071520 0%, #0c3352 55%, #061018 100%);">
+                            <div class="project-card-top">
+                                <div class="project-card-pills">
+                                    <span class="project-card-pill">MLOps</span>
+                                    <span class="project-card-pill">Time Series</span>
+                                </div>
+                                <p class="project-tagline">Predicting US flight arrival delays with end-to-end MLOps — from data ingestion to real-time monitoring</p>
+                            </div>
+                            <div class="project-card-screens">
+                                <img class="project-screen-1" src="assets/flight_delay/flight_delay_map.png" alt="Flight Delay Map View">
+                                <img class="project-screen-2" src="assets/flight_delay/flight_delay_table.png" alt="Flight Delay Table View">
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                        <div class="project-card-links">
+                            <a href="https://github.com/xiaojun1402/MLE_Flight_Delay_Prediction" class="btn-outline" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                            <a href="https://mle-airport-delay-dashboard.streamlit.app/" class="btn-outline" target="_blank" rel="noopener">
                                 <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
                             </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-info-header">
+                            <span class="project-info-dash"></span>
+                            <h3>Flight Delay Prediction</h3>
+                        </div>
+                        <p>End-to-end MLOps system predicting US flight arrival delays across 3 aviation datasets, with a live Streamlit dashboard for real-time exploration.</p>
+                        <ul class="project-bullets">
+                            <li><span class="bullet-icon">✦</span> Medallion architecture (Bronze/Silver/Gold) with PySpark for scalable data preprocessing</li>
+                            <li><span class="bullet-icon">✦</span> Airflow-orchestrated pipeline with MLflow experiment tracking and email alerting</li>
+                            <li><span class="bullet-icon">✦</span> Evidently AI drift monitoring with monthly evaluation cycles on production data</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-pill"><i class="fas fa-bolt"></i> PySpark</span>
+                            <span class="tech-pill"><i class="fas fa-flask"></i> MLflow</span>
+                            <span class="tech-pill"><i class="fas fa-wind"></i> Airflow</span>
+                            <span class="tech-pill"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="tech-pill"><i class="fas fa-chart-line"></i> Evidently AI</span>
+                            <span class="tech-pill"><i class="fas fa-chart-bar"></i> Streamlit</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-reveal data-reveal-delay="3" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.12">
-                    <div class="project-img" style="background: linear-gradient(135deg, #1a0533 0%, #3d1060 50%, #6b21a8 100%);">
-                        <span class="project-img-label">Project Preview</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Project Gamma</h3>
-                        <p>Short description of the project. Highlight the problem solved and the impact delivered.</p>
-                        <div class="project-tags">
-                            <span class="tag">LLMs</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">Python</span>
+                <!-- 03 · Job Salary Prediction -->
+                <div class="project-row" data-reveal data-reveal-delay="3">
+                    <div class="project-card-col">
+                        <div class="project-card project-card--dual" style="background: linear-gradient(145deg, #0a1a0c 0%, #163d20 55%, #081208 100%);">
+                            <div class="project-card-top">
+                                <div class="project-card-pills">
+                                    <span class="project-card-pill">NLP</span>
+                                    <span class="project-card-pill">Regression</span>
+                                    <span class="project-card-pill">Classical ML</span>
+                                </div>
+                                <p class="project-tagline">Benchmarking job salaries with 43% better accuracy than statistical baselines using LLMs and neural networks</p>
+                            </div>
+                            <div class="project-card-screens">
+                                <img class="project-screen-1" src="assets/job_salary_prediction/job_salary_pred_demo2.png" alt="Job Salary Prediction — Input Form">
+                                <img class="project-screen-2" src="assets/job_salary_prediction/job_salary_pred_demo.png" alt="Job Salary Prediction — LinkedIn Demo">
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                        <div class="project-card-links">
+                            <a href="https://github.com/nginyc/job-posting-salary-prediction" class="btn-outline" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="#" class="btn-outline" target="_blank" rel="noopener">
+                            <a href="https://huggingface.co/spaces/nginyc/job_posting_salary_prediction_app" class="btn-outline" target="_blank" rel="noopener">
                                 <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
                             </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-info-header">
+                            <span class="project-info-dash"></span>
+                            <h3>Job Salary Prediction</h3>
+                        </div>
+                        <p>ML system for salary benchmarking trained on 34K US LinkedIn job postings, achieving R² 0.68 with an MLP — outperforming all classical baselines.</p>
+                        <ul class="project-bullets">
+                            <li><span class="bullet-icon">✦</span> Gemini 2.0 Flash extracts structured requirements (skills, education, certifications) from raw job descriptions</li>
+                            <li><span class="bullet-icon">✦</span> SBERT embeddings (all-MiniLM-L6-v2) encode semantic job features for downstream modelling</li>
+                            <li><span class="bullet-icon">✦</span> MLP with Bayesian hyperparameter tuning achieves 43% MAE reduction over statistical baselines</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-pill"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="tech-pill"><i class="fas fa-tree"></i> XGBoost</span>
+                            <span class="tech-pill"><i class="fas fa-brain"></i> SBERT</span>
+                            <span class="tech-pill"><i class="fas fa-star"></i> Gemini</span>
+                            <span class="tech-pill"><i class="fas fa-cogs"></i> scikit-learn</span>
+                            <span class="tech-pill"><i class="fas fa-language"></i> NLP</span>
                         </div>
                     </div>
                 </div>
