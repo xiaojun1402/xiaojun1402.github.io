@@ -14,18 +14,37 @@
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a class="nav-logo" href="#hero">XJ</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-                <i class="fas fa-moon" id="themeIcon"></i>
-            </button>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- ═══════════════════════════ FIXED SOCIAL SIDEBAR ═══════════════════════════ -->
+    <div class="social-sidebar">
+        <a href="https://github.com/xiaojun1402" target="_blank" rel="noopener" class="sidebar-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/angxiaojun/" target="_blank" rel="noopener" class="sidebar-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:xiaojun1402@gmail.com" class="sidebar-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <div class="sidebar-line"></div>
+    </div>
 
     <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
     <section id="hero">
@@ -35,8 +54,9 @@
                     <img src="assets/Ang Xiao Jun.jpeg" alt="Xiao Jun Ang">
                 </div>
             </div>
+            <p class="hero-greeting">Hello, I'm</p>
             <h1 class="hero-name">Xiao Jun Ang</h1>
-            <p class="hero-tagline">AI Engineer &nbsp;·&nbsp; ML Researcher &nbsp;·&nbsp; AI Singapore Apprentice</p>
+            <p class="hero-typed"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
             <div class="hero-links">
                 <a href="https://github.com/xiaojun1402" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
                     <i class="fab fa-github"></i>

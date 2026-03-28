@@ -33,6 +33,71 @@ function setBeevaLogo(theme) {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   HAMBURGER — mobile nav toggle
+═══════════════════════════════════════════════════════════ */
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+// Close menu when a nav link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+    });
+});
+
+/* ═══════════════════════════════════════════════════════════
+   TYPING ANIMATION — cycling job titles
+═══════════════════════════════════════════════════════════ */
+const roles = [
+    'AI Engineer',
+    'ML Researcher',
+    'Deep Learning Practitioner',
+    'AI Singapore Apprentice',
+    'Data Scientist',
+];
+
+let roleIndex  = 0;
+let charIndex  = 0;
+let isDeleting = false;
+const typedEl  = document.getElementById('typed-text');
+
+function type() {
+    if (!typedEl) return;
+    const current = roles[roleIndex];
+
+    if (isDeleting) {
+        typedEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typedEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let delay = isDeleting ? 55 : 95;
+
+    if (!isDeleting && charIndex === current.length) {
+        delay = 1800;           // pause at full word
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting  = false;
+        roleIndex   = (roleIndex + 1) % roles.length;
+        delay = 350;            // pause before typing next
+    }
+
+    setTimeout(type, delay);
+}
+
+type();
+
+/* ═══════════════════════════════════════════════════════════
    SKILLS CAROUSEL — two rows, opposite directions
 ═══════════════════════════════════════════════════════════ */
 const row1 = [
