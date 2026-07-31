@@ -1455,6 +1455,17 @@ ul {
 .tcard-icon.logo-astar { padding: 2px; }
 .tcard-icon.logo-craft { padding: 4px; }
 
+.tcard-icon.logo-amd {
+    background: #000000;
+    border-color: transparent;
+    padding: 0;
+}
+
+/* AMD logo ships with a white margin; scale it up so the black fills the whole icon */
+.tcard-icon.logo-amd img {
+    transform: scale(1.22);
+}
+
 .tcard-title-group { min-width: 0; }
 
 .tcard-title-group h3 {

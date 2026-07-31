@@ -57,11 +57,11 @@ navMenu.querySelectorAll('a').forEach(link => {
    TYPING ANIMATION — cycling job titles
 ═══════════════════════════════════════════════════════════ */
 const roles = [
-    'AI Engineer',
-    'ML Researcher',
-    'Deep Learning Practitioner',
-    'AI Singapore Apprentice',
-    'Data Scientist',
+    'Software Development Engineer',
+    'Forward-Deployed Engineer',
+    'Agentic AI Engineer',
+    'LLM Engineer',
+    'Context Engineer',
 ];
 
 let roleIndex  = 0;
@@ -113,6 +113,10 @@ const row1 = [
     { name: 'Airflow',           icon: 'fas fa-wind' },
     { name: 'CI/CD',             icon: 'fas fa-infinity' },
     { name: 'DVC',               icon: 'fas fa-code-branch' },
+    { name: 'LangChain',         icon: 'fas fa-link' },
+    { name: 'LlamaIndex',        icon: 'fas fa-layer-group' },
+    { name: 'Vector Databases',  icon: 'fas fa-vector-square' },
+    { name: 'Azure OpenAI',      icon: 'fab fa-microsoft' },
 ];
 
 const row2 = [
@@ -128,6 +132,13 @@ const row2 = [
     { name: 'R',                       icon: 'fab fa-r-project' },
     { name: 'Matplotlib',              icon: 'fas fa-palette' },
     { name: 'PBPK Modelling',          icon: 'fas fa-microscope' },
+    { name: 'Agentic AI',              icon: 'fas fa-diagram-project' },
+    { name: 'Function Calling',        icon: 'fas fa-code' },
+    { name: 'Prompt Engineering',      icon: 'fas fa-comment-dots' },
+    { name: 'Context Engineering',     icon: 'fas fa-align-left' },
+    { name: 'Embeddings',              icon: 'fas fa-cubes' },
+    { name: 'NLP',                     icon: 'fas fa-language' },
+    { name: 'LLM Evaluation',          icon: 'fas fa-clipboard-check' },
 ];
 
 function buildTrack(trackId, skills) {
@@ -216,13 +227,17 @@ if (typeof VanillaTilt !== 'undefined') {
    NAVBAR — hide on scroll down, show on scroll up
 ═══════════════════════════════════════════════════════════ */
 const navbar = document.getElementById('navbar');
-let lastScrollY = 0;
+let lastScrollY = window.scrollY;
+const SCROLL_DELTA = 10; // ignore tiny jitters (trackpad momentum) that cause flicker
 
 window.addEventListener('scroll', () => {
     const currentY = window.scrollY;
 
     // Shadow
     navbar.style.boxShadow = currentY > 24 ? '0 4px 24px rgba(0,0,0,0.25)' : 'none';
+
+    // Ignore sub-threshold movements so the bar doesn't flicker on micro-scrolls
+    if (Math.abs(currentY - lastScrollY) < SCROLL_DELTA) return;
 
     // Hide/show (only after scrolling past 80px)
     if (currentY > lastScrollY && currentY > 80) {
